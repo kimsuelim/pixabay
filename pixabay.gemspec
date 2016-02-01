@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{A ruby wrapper for the pixabay API}
   spec.description   = %q{A ruby wrapper for the pixabay API}
-  spec.homepage      = "http://github.com/kimsuelim/Pixabay"
+  spec.homepage      = "https://github.com/kimsuelim/pixabay"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
