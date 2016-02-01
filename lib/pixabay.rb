@@ -30,12 +30,11 @@ module Pixabay
     def photos(**options)
       options = {
         query: {
-          key: @api_key,
+          key: @api_key
         }.merge(options)
       }
 
-      body = self.class.get('', options)
-      body['hits']
+      self.class.get('', options)
     end
   end
 end
