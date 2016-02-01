@@ -43,12 +43,45 @@ client.photos(lang: 'ko', safesearch: true, page: 1, per_page: 30)
 Avalable Request parameters, see [https://pixabay.com/api/docs/](https://pixabay.com/api/docs/)
 
 ```ruby
-options = {
+# Default Request parameters
+{
   response_group: 'image_details', id: nil, q: nil, lang: 'en',
   image_type: 'all', orientation: 'all', category: nil, min_width: 0,
   min_height: 0, editors_choice: false, safesearch: false,
   order: 'popular', page: 1, per_page: 20, callback: nil, pretty: false
 }
+```
+
+Example responses
+
+```ruby
+[
+  {
+    "previewHeight"=>150,
+    "likes"=>7,
+    "favorites"=>7,
+    "tags"=>"사람, 사람의, 여성",
+    "webformatHeight"=>640,
+    "views"=>107,
+    "webformatWidth"=>427,
+    "previewWidth"=>100,
+    "comments"=>2,
+    "downloads"=>37,
+    "pageURL"=>"https://pixabay.com/ko/%EC%82%AC%EB%9E%8C-%EC%82%AC%EB%9E%8C%EC%9D%98-%EC%97%AC%EC%84%B1-%EC%86%8C%EB%85%80-1166368/",
+    "previewURL"=>"https://pixabay.com/static/uploads/photo/2016/01/28/14/59/person-1166368_150.jpg",
+    "webformatURL"=>"https://pixabay.com/get/e834b7092bf2093ed95c4518b74d419fe170e4d104b0154491f3c17caeedb7_640.jpg",
+    "imageWidth"=>2667,
+    "user_id"=>526143,
+    "user"=>"Pezibear",
+    "type"=>"photo",
+    "id"=>1166368,
+    "userImageURL"=>"https://pixabay.com/static/uploads/user/2015/01/09/23-10-25-395_250x250.jpg",
+    "imageHeight"=>4000
+  },
+  {
+    ...
+  }
+]
 ```
 
 ## Development
@@ -59,10 +92,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/pixabay. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kimsuelim/pixabay. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
-
