@@ -1,5 +1,7 @@
 # Pixabay
 
+[![API Testing](https://img.shields.io/badge/API%20Test-RapidAPI-blue.svg)](https://rapidapi.com/package/Pixabay?utm_source=PixabayGithub&utm_medium=button&utm_content=Vender_GitHub)
+
 ## DESCRIPTION:
 
 A Ruby API for [https://pixabay.com](https://pixabay.com)
