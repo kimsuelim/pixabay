@@ -7,7 +7,7 @@ module Pixabay
   extend Config
 
   def self.new
-    Pixabay::Client.new(api_key: api_key, timeout: 10)
+    Pixabay::Client.new(key: key, timeout: 10)
   end
 
   class Client
@@ -22,15 +22,15 @@ module Pixabay
 
     }
 
-    def initialize(api_key: nil, timeout: 10)
-      @api_key = api_key
+    def initialize(key: nil, timeout: 10)
+      @key = key
       @timeout = timeout
     end
 
     def photos(**options)
       options = {
         query: {
-          key: @api_key
+          key: @key
         }.merge(options)
       }
 
