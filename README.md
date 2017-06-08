@@ -33,14 +33,17 @@ Pixabay.configure do |config|
 end
 ```
 
-Using `Pixabay.new` to get the client, use `pixabay.client`:
+### Query search
 
 ```ruby
+require 'pixabay'
 client = Pixabay.new
-client.photos(lang: 'ko', safesearch: true, page: 1, per_page: 30)
+client.photos(q: 'yellow+flower', safesearch: true, page: 1, per_page: 30)
 ```
+This will find 30 yellow flower pictures.
+If you want high resolution pictures, see (https://pixabay.com/api/docs/?request_full_access)
 
-Avalable Request parameters, see [https://pixabay.com/api/docs/](https://pixabay.com/api/docs/)
+Avalable Request parameters see [https://pixabay.com/api/docs/](https://pixabay.com/api/docs/)
 
 ```ruby
 # Default Request parameters
