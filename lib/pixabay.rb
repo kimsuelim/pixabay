@@ -1,5 +1,5 @@
 require 'pixabay/config'
-require "pixabay/version"
+require 'pixabay/version'
 
 require 'httparty'
 
@@ -12,13 +12,13 @@ module Pixabay
 
   class Client
     include HTTParty
-    base_uri 'https://pixabay.com/api'
+    base_uri "https://pixabay.com/api"
 
     options = {
-      response_group: 'image_details', id: nil, q: nil, lang: 'en',
-      image_type: 'all', orientation: 'all', category: nil, min_width: 0,
+      response_group: "image_details", id: nil, q: nil, lang: "en",
+      image_type: "all", orientation: "all", category: nil, min_width: 0,
       min_height: 0, editors_choice: false, safesearch: false,
-      order: 'popular', page: 1, per_page: 20, callback: nil, pretty: false
+      order: "popular", page: 1, per_page: 20, callback: nil, pretty: false
 
     }
 
@@ -34,7 +34,7 @@ module Pixabay
         }.merge(options)
       }
 
-      self.class.get('', options)
+      self.class.get("", options)
     end
   end
 end
