@@ -28,7 +28,7 @@ If you want to configure pixabay through an initializer (e.g. `config/initialize
 
 ```ruby
 Pixabay.configure do |config|
-  config.key = 'Your API key'
+  config.key = "Your API key"
   config.timeout = 10
 end
 ```
@@ -156,6 +156,7 @@ Example responses
   ],
   "total"=>5593
 }
+```
 
 ## Development
 
