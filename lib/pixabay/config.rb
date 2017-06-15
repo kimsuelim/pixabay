@@ -2,7 +2,7 @@ module Pixabay
   module Config
     # pixabay client options
     OPTION_KEYS = [
-      :api_key,
+      :key,
       :timeout,
     ]
 

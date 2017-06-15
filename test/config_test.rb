@@ -3,7 +3,7 @@ require 'test_helper'
 class ConfigTest < Minitest::Spec
   it 'create a new pixabay client through initializer' do
     Pixabay.configure do |config|
-      config.api_key = 'a'
+      config.key = 'a'
       config.timeout = 10
     end
     b = Pixabay.new
