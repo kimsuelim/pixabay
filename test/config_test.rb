@@ -3,15 +3,20 @@ require 'test_helper'
 class ConfigTest < Minitest::Spec
   it "create a new pixabay client through initializer" do
     Pixabay.configure do |config|
-      config.key = "a"
+      config.key = "key"
       config.timeout = 10
     end
-    b = Pixabay.new
-    Pixabay::Client.must_equal b.class
+    client = Pixabay.new
+    Pixabay::Client.must_equal client.class
   end
 
-  it "get photos" do
-    b = Pixabay.new
-    b.photos(lang: "ko", safesearch: true, page: 1, per_page: 30)
+  it "search photos" do
+    client = Pixabay.new
+    client.photos(q: "yellow+flower", safesearch: true, page: 1, per_page: 30)
+  end
+
+  it "search videos" do
+    client = Pixabay.new
+    client.videos(q: "yellow+flower", safesearch: true, page: 1, per_page: 30)
   end
 end
